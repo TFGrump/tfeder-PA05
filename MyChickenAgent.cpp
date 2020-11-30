@@ -119,7 +119,6 @@ namespace GMUCS425
         float w = 1 / perp_vec.normsqr();
         force = (hp.n * w) * k_obst;
     }
-    //return Vector2d(0, 0);
     return force;
   }
 

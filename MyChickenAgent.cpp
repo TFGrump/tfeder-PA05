@@ -57,6 +57,7 @@ namespace GMUCS425
         if ((*neighbor) == this) continue;
         Vector2d chicken_distance = distance(this, (*neighbor));
         float w = 1 / chicken_distance.normsqr();
+        w = 750;
         force_sep += (chicken_distance / chicken_distance.normsqr()) * w;
     }
     force_sep *= -1;
@@ -69,20 +70,17 @@ namespace GMUCS425
     for (auto neighbor = neighbors.begin(); neighbor != neighbors.end(); neighbor++)
     {
         Vector2d chicken_distance = distance((*neighbor), this);
-        //float w = 1 / chicken_distance.normsqr();
-        float w = (*neighbor)->vel.normsqr();
-        if (isnan(w)) continue;
+        float w = 1 / chicken_distance.normsqr();
+        w = 5;
         force_align += (*neighbor)->vel * w;
         total_weight += w;
     }
-    if(total_weight!=0)
-        force_align = force_align / total_weight;
+    force_align = force_align / total_weight;
 
     //3. compute coherent force
     //https://www.youtube.com/watch?v=mZ1zCo-acuQ&feature=youtu.be @ 16:30
     // force_coherent = x_cm - x
     // x_cm = sum(weight * pos_of_neighbor) / sum(weight)
-    // weight = 1 / magnitude_to_xi^2
     // weight = mass
     Vector2d x_cm = Vector2d(0, 0);
     total_weight = 0;
@@ -119,10 +117,10 @@ namespace GMUCS425
         // force = k * (w * n)
         Vector2d perp_vec = hp.n * Vector2d(this->pos - hp.p); // Should only have either the x or the y, going to be used for the weight
         float w = 1 / perp_vec.normsqr();
-        //force = (hp.n * w) * k_obst;
+        force = (hp.n * w) * k_obst;
     }
-    return Vector2d(0, 0);
-    //return force;
+    //return Vector2d(0, 0);
+    return force;
   }
 
   //DO NOT CHANGE THIS FUNCTION:

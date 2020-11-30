@@ -1,5 +1,5 @@
 # PA05
-Submitted on: 11/30/2020 @ 5:11AM
+Submitted on: 11/30/2020 @ 5:44AM
 ## General Overview
 A place for my CS 425 project.   
 
@@ -18,3 +18,5 @@ It is done for the most part; I have kinda made the flocking algorithm, and ode 
     - Implemented compute_following_force
 3. I have made a video that is in the submission folder on Blackboard.   
     - [My video showing my output.](https://youtu.be/ngdsCzrq8Ww)
+
+Side note: Let me know if I need to take this repo down for honor code stuff (even though I am pretty sure that the only people who can see it is you and I since I made it private and invited you to the repo). I just needed a spot to put my work incase my laptop, or VS, decided to wanted to crash and I lose my work. I also would think that this would also save you some space when you are downloading projects since it is only three files instead of many more that you arlready have.

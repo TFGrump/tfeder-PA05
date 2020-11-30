@@ -16,4 +16,5 @@ It is done for the most part; I have kinda made the flocking algorithm, and ode 
     - Implemented compute_flocking_force function
     - Implemented compute_obstacle_avoidance_force
     - Implemented compute_following_force
-3. I have made a video that is in the submission folder on Blackboard.
+3. I have made a video that is in the submission folder on Blackboard.   
+    - [My video showing my output.](https://youtu.be/ngdsCzrq8Ww)

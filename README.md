@@ -1,6 +1,6 @@
 # PA05
 (Submission 1) Submitted on: 11/30/2020 @ 5:49AM    
-(Submission 2) Submitted on: 11/30/2020 @ 5:56AM (I changed the screenshot link at the end of the submssion text field thingy to show that I have invited you)
+(Submission 2) Submitted on: 11/30/2020 @ 5:59AM (I changed the screenshot link at the end of the submssion text field thingy to show that I have invited you)
 ## General Overview
 A place for my CS 425 project.   
 
